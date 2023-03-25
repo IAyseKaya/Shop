@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Diz Üstü Bilgisayar",
+      "price": 2500,
+      "categoryId": 1,
+      "description": "Monster",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Cep Telefonu",
+      "price": 2500,
+      "categoryId": 2,
+      "description": "Apple",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Mouse",
+      "price": 2500,
+      "categoryId": 3,
+      "description": "Dell",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Diz Üstü Bilgisayar",
+      "price": 2500,
+      "categoryId": 1,
+      "description": "Dell",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+    },
+    {
+      "name": "Dell",
+      "description": "Dell Ispiron",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "price": "3050",
+      "categoryId": "1",
+      "id": 13
+    },
+    {
+      "name": "Diz Üstü Bilgisayar",
+      "description": "Asus Rog",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "price": "4500",
+      "categoryId": "1",
+      "id": 14
+    },
+    {
+      "name": "Kulaklık",
+      "description": "Steelseries ",
+      "imageUrl": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "price": "1000",
+      "categoryId": "3",
+      "id": 15
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Diz Üstü Bilgisayar"
+    },
+    {
+      "id": 2,
+      "name": "Cep Telefonu"
+    },
+    {
+      "id": 3,
+      "name": "Bilgisayar Bileşenleri"
+    }
+  ]
+}
