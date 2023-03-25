@@ -1,0 +1,47 @@
+<div class="col-md-7 col-lg-8">
+  <h4 class="mb-3">Yeni Ürün Ekle</h4>
+  <form #productAddForm="ngForm"  (ngSubmit)="add(productAddForm)">
+    <div class="form-group">
+        <input type="text" class="form-control" name="name" id="name" placeholder="Ürün Adı" #productName="ngModel" [(ngModel)]="model.name" required >
+      <br>
+      <div class="alert alert-danger"  *ngIf="productName.invalid&&productName.dirty" >
+          Ürün adı girmek zorunludur.</div>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" name="description" id="description" placeholder="Ürün Açıklaması" #productDescription="ngModel" [(ngModel)]="model.description" required >
+      <br>
+      <div class="alert alert-danger"  *ngIf="productDescription.invalid&&productDescription.dirty" >
+          Ürün açıklaması girmek zorunludur.
+        </div>
+    </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="image" id="image" placeholder="Ürün Fotoğraf Url'i " #imageUrl="ngModel" [(ngModel)]="model.imageUrl" required >
+        <br>
+        <div class="alert alert-danger"  *ngIf="imageUrl.invalid&&imageUrl.dirty" >
+          Ürün fotoğrafı için URl girmek zorunludur.
+        </div>
+      </div>
+        <div class="form-group">
+        <input type="text" class="form-control" name="price" id="price" placeholder="Ürün Fiyatı " #price="ngModel" [(ngModel)]="model.price" required >
+          <br>
+          <div class="alert alert-danger"  *ngIf="price.invalid&&price.dirty" >
+          Ürün fiyatı girmek zorunludur.
+        </div>
+        </div>
+    <div class="form-group mb-7">
+
+          <select  id="categoryId" name="categoryId"  class="dropdown  form-control" #categoryId = "ngModel"  [(ngModel)]="model.categoryId"  required >
+            <option *ngFor="let category of categories" [value]="category.id">
+              {{category.name}}
+            </option>
+          </select>
+          <div class="alert alert-danger"  *ngIf="categoryId.invalid&&categoryId.touched" >
+            Ürün kategorisi girmek zorunludur.
+          </div>
+      </div>
+
+    <br>
+    <br>
+    <button class="w-100 btn btn-dark btn-lg" type="submit" [disabled]="productAddForm.invalid" >Ürün Ekle</button>
+  </form>
+</div>

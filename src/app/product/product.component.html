@@ -1,0 +1,51 @@
+
+<div class="form-group">
+  <div class="d-flex">
+  <input class="form-control" id="productName" placeholder="Ara..."
+  [(ngModel)]="filterText"
+  >
+  <a class="btn btn-sm btn-outline-secondary" >
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+  </a>
+  </div>
+  <small *ngIf="filterText" class="text-muted">
+    {{filterText}} aradınız.
+  </small>
+</div>
+
+<ng-template  #noProduct >
+  <div class="alert alert-primary" role="alert">
+    Bu Kategoride Ürün Bulunmamaktadır.
+  </div>
+</ng-template>
+
+<div class="album py-5">
+  <div class="row ">
+  <div class="container" >
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3" >
+      <div class="col" *ngFor="let product of products | productFilter:filterText">
+        <div class="card shadow-sm">
+          <img [src]="product.imageUrl" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name | uppercase}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <br>
+            <small class="text-muted">{{product.price | currency }}</small>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <div *ngIf="isLoggedin()==false">
+                  <button type="button" class="btn btn-primary" (click)="addToCart()" > Sepete Ekle </button>
+                </div>
+                <div *ngIf="isLoggedin()==true">
+                  <button type="button" class="btn btn-danger"  (click)="deleteProduct(product.id)">Sil</button>
+                </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

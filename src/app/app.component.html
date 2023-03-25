@@ -1,0 +1,36 @@
+
+<body class="bg-light">
+  <app-nav></app-nav>
+<div class="d-flex" >
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" style="padding-top: 20px" *ngIf="isLoggedin()==true">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span data-feather="home" class="align-text-bottom"></span>
+                Tüm Ürünler
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/product-add-1">
+                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                Ürün Ekle / Klasik Form
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/product-add-2">
+                <span data-feather="layers" class="align-text-bottom"></span>
+               Ürün Ekle / Reactive Form
+              </a>
+            </li>
+          </ul>
+      </nav>
+
+  <div class="container-fluid col-md-9">
+    <app-category></app-category>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</body>
+
+

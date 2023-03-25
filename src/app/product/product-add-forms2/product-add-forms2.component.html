@@ -1,0 +1,46 @@
+<div class="col-md-7 col-lg-8"><h4>
+Yeni Ürün Ekle / Reactive
+</h4>
+<form class="form-group" [formGroup]="productAddForm" (ngSubmit)="add()" >
+  <div class="form-group">
+    <input type =text id="name" name="name" class="form-control" placeholder="Ürün Adı" formControlName='name' >
+    <br>
+    <div class="alert alert-danger" *ngIf="productAddForm.get('name')?.hasError('required') && productAddForm.get('name')?.dirty"   >Ürün adı giriniz.</div>
+  </div>
+
+  <div class="form-group">
+    <input type =text id="description" name="description" class="form-control" placeholder="Ürün Açıklaması" formControlName='description' >
+    <br>
+    <div class="alert alert-danger" *ngIf="productAddForm.get('description')?.hasError('required') && productAddForm.get('description')?.dirty ">Ürün açıklaması giriniz.</div>
+  </div>
+
+  <div class="form-group">
+    <input type =text id="imageUrl" name="imageUrl" class="form-control" placeholder="Ürün Fotoğraf Url'i" formControlName='imageUrl' >
+    <br>
+    <div class="alert alert-danger" *ngIf="productAddForm.get('imageUrl')?.hasError('required') && productAddForm.get('imageUrl')?.dirty ">Ürün fiyatı giriniz.</div>
+  </div>
+
+  <div class="form-group">
+    <input type =text id="price" name="price" class="form-control" placeholder="Ürün Fiyatı" formControlName='price' >
+    <br>
+    <div class="alert alert-danger" *ngIf="productAddForm.get('price')?.hasError('required') && productAddForm.get('price')?.dirty ">Ürün fiyatı giriniz.</div>
+  </div>
+
+  <div class="form-group mb-7">
+
+      <select  id="categoryId" name="categoryId"  class="dropdown form-control" formControlName='categoryId'>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{category.name}}
+        </option>
+      </select>
+    <br>
+      <div class="alert alert-danger"  *ngIf="productAddForm.get('categoryId')?.hasError('required') && productAddForm.get('categoryId')?.touched " >
+        Ürün kategorisi girmek zorunludur.
+      </div>
+
+  </div>
+  <br>
+  <br>
+  <button class="w-100 btn btn-dark btn-lg" type="submit" [disabled]="productAddForm.invalid" >Ürün Ekle</button>
+</form>
+</div>
